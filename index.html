@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climbing Adventure - Cyprus</title>
+    <style>
+        @keyframes floatAnimation {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .hero {
+            background: linear-gradient(to bottom, #1AAF58, #5BB01A);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero h1, .hero p, .hero button {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 { font-size: 3em; margin: 10px 0; text-shadow: 3px 3px 6px rgba(0,0,0,0.6); font-weight: bold; }
+        .hero p { font-size: 1.4em; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .floating-icons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        .floating-icons img {
+            position: absolute;
+            width: 100px;
+            opacity: 0.8;
+            animation: floatAnimation 4s infinite ease-in-out;
+        }
+        .helmet { top: 20%; left: 10%; animation-delay: 0s; }
+        .rope { top: 50%; left: 70%; animation-delay: 1s; }
+        .carabiner { top: 80%; left: 40%; animation-delay: 2s; }
+        .container { padding: 40px 20px; max-width: 900px; margin: auto; }
+        .section { margin-bottom: 40px; }
+        .cta {
+            background-color: #B05B1A;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3em;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+        }
+        .cta:hover { background-color: #8A4515; transform: scale(1.1); box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); }
+        .form input { width: 100%; padding: 14px; margin: 10px 0; border: 2px solid #5BB01A; border-radius: 8px; font-size: 1.1em; }
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(to top, #1AAF58, #5BB01A);
+            color: white;
+            position: relative;
+            font-size: 1.2em;
+        }
+        footer p {
+            position: relative;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Climbing Adventure in Cyprus</h1>
+        <p>Join us from August 10-15 for an unforgettable FREE climbing trip!</p>
+        <button class="cta" onclick="document.getElementById('signup').scrollIntoView()">Join the Waitlist</button>
+        <div class="floating-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Climbing_Helmet.png" class="helmet">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Climbing_Rope.png" class="rope">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Climbing_Carabiner.png" class="carabiner">
+        </div>
+    </div>
+    <div class="container">
+        <div class="section">
+            <h2>About the Trip</h2>
+            <p>Experience the thrill of climbing in the stunning landscapes of Cyprus! Open to beginners and pros alike.</p>
+        </div>
+        <div class="section">
+            <h2>Why Join?</h2>
+            <ul>
+                <li>Explore breathtaking climbing spots</li>
+                <li>No experience needed - guides available</li>
+                <li>Meet a community of adventure lovers</li>
+                <li>Completely FREE – just bring your energy!</li>
+            </ul>
+        </div>
+        <div class="section" id="signup">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScaCY7VBwEIVey43zp_Raz3BZirdXzcIBLYpQ8By3XGl9duMQ/viewform?embedded=true" width="640" height="1265" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Climbing Adventure Cyprus | Contact: info@example.com</p>
+    </footer>
+</body>
+</html>
